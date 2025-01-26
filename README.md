@@ -1,0 +1,1 @@
+A simple proof of concept for a simple kafka producer and consumer.

@@ -1,0 +1,36 @@
+[versions]
+kotlin = "2.0.21"
+coroutines = "1.7.3"
+kotlinxSerialization = "1.6.0"
+kafka = "3.6.1"
+okhttp = "4.12.0"
+slf4j = "2.0.9"
+logback = "1.4.11"
+junit = "5.10.0"
+mockk = "1.13.8"
+javacord = "3.8.0"
+
+[libraries]
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib" }
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test" }
+
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+kafka-clients = { group = "org.apache.kafka", name = "kafka-clients", version.ref = "kafka" }
+kafka-streams = { group = "org.apache.kafka", name = "kafka-streams", version.ref = "kafka" }
+
+okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+
+javacord = { group = "org.javacord", name = "javacord", version.ref = "javacord" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
