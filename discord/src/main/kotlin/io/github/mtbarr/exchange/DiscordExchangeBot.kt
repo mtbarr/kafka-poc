@@ -10,7 +10,8 @@ import java.util.Properties
 
 
 fun main() {
-  val botToken = System.getenv("DISCORD_BOT_TOKEN") ?: error("DISCORD_BOT_TOKEN is not set")
+  val botToken = System.getenv("DISCORD_BOT_TOKEN")
+    ?: error("DISCORD_BOT_TOKEN is not set")
 
   DiscordApiBuilder()
     .setToken(botToken)
@@ -36,6 +37,6 @@ fun main() {
       Discord.currentConsumer = ExchangeConsumer(
         api = currentApi,
         consumer = KafkaConsumer(consumerProperties)
-      )
+      ).also(ExchangeConsumer::start)
     }
 }
